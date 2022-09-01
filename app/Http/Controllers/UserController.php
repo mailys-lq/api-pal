@@ -38,10 +38,9 @@ class UserController extends Controller
         $data = $request->validate([
             'firstname' => 'required',
             'lastname' => 'required',
-            'email' => 'required',
+            'email' => 'required|email:rfc|unique:users',
             'password' => 'required|min:7'
         ]);
-        dump($data); 
         $user = User::create($data);
 
         return response()->json($user);
