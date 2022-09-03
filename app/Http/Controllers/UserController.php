@@ -41,6 +41,7 @@ class UserController extends Controller
             'email' => 'required|email:rfc|unique:users',
             'password' => 'required|min:7'
         ]);
+
         $user = User::create($data);
 
         return response()->json($user);
