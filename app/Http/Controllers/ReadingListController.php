@@ -60,8 +60,8 @@ class ReadingListController extends Controller
         $reading_list = ReadingLists::findOrFail($id);
 
         $data = $request->validate([
-            'id_book' => 'required', 
-            'book_read' => 'nullable|boolean', 
+            'id_book' => 'nullable', 
+            'book_read' => 'nullable', 
             'like' => 'nullable|numeric|max:5', 
             'user_id' => 'nullable|exists:users,id'
         ]);
