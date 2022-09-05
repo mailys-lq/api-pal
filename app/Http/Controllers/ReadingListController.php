@@ -27,7 +27,7 @@ class ReadingListController extends Controller
     {
         $data = $request->validate([
             'id_book' => 'required', 
-            'book_read' => 'nullable|boolean', 
+            'book_read' => 'nullable', 
             'like' => 'nullable|numeric|max:5', 
             'user_id' => 'nullable|exists:users,id'
         ]);
