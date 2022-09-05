@@ -11,7 +11,7 @@ class Favorites extends Model
 
     protected $fillable = ['title', 'id_book', 'page_number', 'gender', 'img_book', 'user_id'];
     
-    protected $with = ['users'];
+    // protected $with = ['users'];
 
     public function users()
     {
