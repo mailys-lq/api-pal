@@ -26,6 +26,7 @@ class ReadingListController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
+            'id' => 'required',
             'id_book' => 'required', 
             'book_read' => 'nullable|boolean', 
             'like' => 'nullable|numeric|max:5', 
@@ -60,6 +61,7 @@ class ReadingListController extends Controller
         $reading_list = ReadingLists::findOrFail($id);
 
         $data = $request->validate([
+            'id' => 'required',
             'id_book' => 'required', 
             'book_read' => 'nullable|boolean', 
             'like' => 'nullable|numeric|max:5', 
