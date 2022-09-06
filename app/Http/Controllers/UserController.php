@@ -39,7 +39,9 @@ class UserController extends Controller
             'firstname' => 'required',
             'lastname' => 'required',
             'email' => 'required|email:rfc|unique:users',
-            'password' => 'required|min:7'
+            'password' => 'required|min:7',
+            'url_image_profil' => 'nullable',
+            'url_image_couverture' => 'nullable',
         ]);
 
         $user = User::create($data);
@@ -72,8 +74,10 @@ class UserController extends Controller
         $data = $request->validate([
             'firstname' => 'nullable',
             'lastname' => 'nullable',
-            'email' => 'required|email:rfc,dns|unique:users',
-            'password' => 'nullable|min:7'
+            'email' => 'nullable|email:rfc,dns|unique:users',
+            'password' => 'nullable|min:7', 
+            'url_image_profil' => 'nullable',
+            'url_image_couverture' => 'nullable',
         ]);
 
         $user->update($data);

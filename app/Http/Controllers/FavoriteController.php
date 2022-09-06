@@ -62,10 +62,10 @@ class FavoriteController extends Controller
         $favorite = Favorites::findOrFail($id);
 
         $data = $request->validate([
-            'title' => 'required',
-            'id_book' => 'required',
+            'title' => 'nullable',
+            'id_book' => 'nullable',
             'page_number' => 'nullable',
-            'gender' => 'required'
+            'gender' => 'nullable'
         ]);
 
         $favorite->update($data);
