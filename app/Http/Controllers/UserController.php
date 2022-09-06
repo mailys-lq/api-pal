@@ -70,9 +70,10 @@ class UserController extends Controller
         $user = User::findOrFail($id);
 
         $data = $request->validate([
-            'name' => 'required',
+            'firstname' => 'nullable',
+            'lastname' => 'nullable',
             'email' => 'required|email:rfc,dns|unique:users',
-            'password' => 'required|min:7'
+            'password' => 'nullable|min:7'
         ]);
 
         $user->update($data);
