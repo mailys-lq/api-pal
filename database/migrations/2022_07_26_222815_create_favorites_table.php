@@ -19,7 +19,7 @@ class CreateFavoritesTable extends Migration
             $table->string('id_book');
             $table->integer('page_number');
             $table->string('gender');
-            $table->string('img_book');
+            $table->text('img_book');
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
