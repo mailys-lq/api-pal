@@ -63,7 +63,8 @@ class ReadingListController extends Controller
             'id_book' => 'nullable', 
             'book_read_number' => 'nullable', 
             'like' => 'nullable|numeric|max:5', 
-            'user_id' => 'nullable|exists:users,id'
+            'user_id' => 'nullable|exists:users,id', 
+            'editor_or_reader' => 'nullable'
         ]);
 
         $reading_list->update($data);

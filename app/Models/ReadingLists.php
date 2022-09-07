@@ -10,7 +10,7 @@ class ReadingLists extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['id_book', 'book_read_number', 'like', 'user_id'];
+    protected $fillable = ['id_book', 'book_read_number', 'like', 'user_id', 'editor_or_reader'];
 
     public function Users()
     {
