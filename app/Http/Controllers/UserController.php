@@ -42,6 +42,7 @@ class UserController extends Controller
             'password' => 'required|min:7',
             'url_image_profil' => 'nullable',
             'url_image_couverture' => 'nullable',
+            'editor_or_reader' => 'nullable'
         ]);
 
         $user = User::create($data);
@@ -78,6 +79,7 @@ class UserController extends Controller
             'password' => 'nullable|min:7', 
             'url_image_profil' => 'nullable',
             'url_image_couverture' => 'nullable',
+            'editor_or_reader' => 'nullable'
         ]);
 
         $user->update($data);

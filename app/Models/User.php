@@ -23,7 +23,8 @@ class User extends Authenticatable
         'email',
         'password',
         'url_image_profil',
-        'url_image_couverture'
+        'url_image_couverture', 
+        'editor_or_reader'
     ];
 
     /**
